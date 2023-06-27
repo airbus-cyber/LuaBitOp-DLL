@@ -1,0 +1,1 @@
+Repository to share [LuaBitOp](http://bitop.luajit.org/) compiled DLL for Windows x64 machines (tested on Windows 11)
