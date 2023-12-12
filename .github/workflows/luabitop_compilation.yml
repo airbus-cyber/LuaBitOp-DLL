@@ -4,7 +4,7 @@ name: Compilation
 
 env:
   LUABITOP_VERSION: "1.0.2"
-  WIRESHARK_VERSION: "4.0.10"
+  WIRESHARK_VERSION: "4.2.0"
   LUA_VERSION: "5.2.4"
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
       - name: Get LuaBitOp
         run: Invoke-WebRequest -Uri http://bitop.luajit.org/download/LuaBitOp-${env:LUABITOP_VERSION}.zip -OutFile dll.zip
       - name: Get Wireshark
-        run: Invoke-WebRequest -Uri  https://2.na.dl.wireshark.org/win64/Wireshark-win64-${env:WIRESHARK_VERSION}.exe -OutFile wireshark.exe
+        run: Invoke-WebRequest -Uri  https://2.na.dl.wireshark.org/win64/Wireshark-${env:WIRESHARK_VERSION}-x64.exe -OutFile wireshark.exe
       - name: Get Lua
         run: Invoke-WebRequest -Uri  https://www.lua.org/ftp/lua-${env:LUA_VERSION}.tar.gz -OutFile lua.tar.gz
 
