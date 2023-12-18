@@ -56,6 +56,8 @@ jobs:
         run: cp lua\src\* dll
       - name: Compile
         run: cd dll && mingw32-make -f Makefile.mingw
+      - name: Copy Lua Source code to build directory
+        run: cp dll/bit.dll bit.dll
 
       ## Archive dll for download
       - name: Archive DLL as artifact
@@ -63,7 +65,7 @@ jobs:
         with:
           name: LuaBitOp-DLL
           path: |
-            dll/bit.dll
+            bit.dll
             LICENSE
             README.md
           if-no-files-found: error
@@ -71,13 +73,13 @@ jobs:
       ## Release on tag
       - uses: actions/download-artifact@v4
       - name: Display structure of downloaded files
-        run: dir /s
+        run: dir LuaBitOp-DLL
       - name: Release DLL
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            dll/bit.dll
+            bit.dll
             LICENSE
             README.md
           fail_on_unmatched_files: true
