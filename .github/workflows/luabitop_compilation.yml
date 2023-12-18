@@ -20,6 +20,10 @@ jobs:
       contents: write
     steps:
       ## Get all source archives
+      - name: Get License
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
       - name: Get LuaBitOp
         run: Invoke-WebRequest -Uri http://bitop.luajit.org/download/LuaBitOp-${env:LUABITOP_VERSION}.zip -OutFile dll.zip
       - name: Get Wireshark
@@ -55,7 +59,7 @@ jobs:
 
       ## Archive dll for download
       - name: Archive DLL as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: luabitop
           path: |
