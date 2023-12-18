@@ -1,3 +1,9 @@
+# This file is part of LuaBitOp-DLL.
+#
+# Copyright (C) 2023 Airbus CyberSecurity SAS
+#
+# LuaBitOp-DLL is free software, released under the MIT license.
+
 name: Compilation
 'on':
   - push
@@ -52,7 +58,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: luabitop
-          path: dll/bit.dll
+          path: |
+            dll/bit.dll
+            LICENSE
+            README.md
           if-no-files-found: error
 
       ## Release on tag

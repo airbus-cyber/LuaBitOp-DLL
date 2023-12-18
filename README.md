@@ -1,7 +1,21 @@
+# LuaBitOp-DLL
+
 Repository to share [LuaBitOp](http://bitop.luajit.org/) compiled DLL for Windows x64 machines (tested on Windows 11)
 
-This project is released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
+## License
 
-This binary is a compilation of the following project:
+LuaBitOp-DLL
 
-Lua BitOp is Copyright © 2008-2012 Mike Pall. Lua BitOp is free software, released under the [MIT license](http://www.opensource.org/licenses/mit-license.php) (same license as the Lua core). 
+Copyright (C) 2023 Airbus CyberSecurity SAS
+
+LuaBitOp-DLL is free software, released under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
+
+### Third-party software usage
+
+This program uses the following software to run:
+
+| Software | Version | Copyright | License |
+|-|-|-|-|
+| Lua | 5.2.4 | 1994–2015 Lua.org, PUC-Rio | MIT |
+| Lua Bit Operations Module (Lua BitOp) | 1.0.2 | 2008-2012 Mike Pall | MIT |
+| Wireshark | 4^ | 1998-2023 Gerald Combs and contributors | GPL-2.0-or-later |
