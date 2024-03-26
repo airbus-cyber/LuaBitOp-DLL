@@ -1,3 +1,7 @@
+# Archiving
+
+This repository is now archived as all clients of this repository are now directly integrating the LuaBitOp compilation in their workflows.
+
 # LuaBitOp-DLL
 
 Repository to share [LuaBitOp](http://bitop.luajit.org/) compiled DLL for Windows x64 machines (tested on Windows 11)
